@@ -42,24 +42,23 @@
                   // navigator.notification.alert("PhoneGap is working");
              }
 
-             function callAnothePage()
+             function callBack()
              {
-                window.location = "newpage.html";
+                window.location = "index.html";
              }
 
           </script>
     </head>
     <body onLoad="onLoad();">
         <div class="app">
-            <h1>Schattigheidapp</h1>
+            <h1>Nieuwe pagina</h1>
             <p>
-            	Nina Hermens <br>
-                Sophie van Duivenboden
+            	Je bent nu op de nieuwe pagina!
             </p>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-                <button name="buttonClick" onclick="callAnothePage()">Click Me!</button>
+                <button name="buttonClick" onclick="callBack()">Click Me!</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
