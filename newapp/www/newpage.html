@@ -42,9 +42,13 @@
                   // navigator.notification.alert("PhoneGap is working");
              }
 
-             function callBack()
+             function callBarcode()
              {
                 window.location = "testbarcode.html";
+             }
+			 function callCamera()
+             {
+                window.location = "testcamera.html";
              }
 
           </script>
@@ -58,7 +62,9 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-                <button name="buttonClick" onclick="callBack()">Click Me!</button>
+                <button name="buttonClick" onclick="callBarcode()">Ga naar barcode</button>
+                <br>
+                <button name="buttonClick" onclick="callCamera()">Ga naar camera</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
