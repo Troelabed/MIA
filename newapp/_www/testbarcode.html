@@ -42,25 +42,38 @@
                   // navigator.notification.alert("PhoneGap is working");
              }
 
-             function callAnothePage()
+             function callBack()
              {
-                window.location = "newpage.html";
+                window.location = "testbarcode.html";
              }
 
           </script>
     </head>
     <body onLoad="onLoad();">
-        <div class="app">
-            <h1>Schattigheidapp</h1>
+            <h1>Barcodescanner</h1>
             <p>
-            	Nina Hermens <br>
-                Sophie van Duivenboden
+            	Test
             </p>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-                <button name="buttonClick" onclick="callAnothePage()">Click Me!</button>
-            </div>
+            
+            <script>
+			
+			function scan() {
+			   cordova.plugins.barcodeScanner.scan(
+				  function (result) {
+					  alert("We got a barcode\n" +
+							"Result: " + result.text + "\n" +
+							"Format: " + result.format + "\n" +
+							"Cancelled: " + result.cancelled);
+				  }, 
+				  function (error) {
+					  alert("Scanning failed: " + error);
+				  }
+   				);
+			};
+			
+			</script>
+            <button name="buttonClick" onclick="scan()">Scan me!</button>
+            		
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
